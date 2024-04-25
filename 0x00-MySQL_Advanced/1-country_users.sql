@@ -1,0 +1,7 @@
+-- mysql script
+CREATE TABLE IF NOT EXISTS users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  email VARCHAR(225) NOT NULL UNIQUE,
+  name VARCHAR(225),
+  country ENUM('US' ,'TN', 'CO') NOT NULL DEFAULT 'US'
+);
