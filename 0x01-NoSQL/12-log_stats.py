@@ -12,5 +12,6 @@ if __name__ == "__main__":
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     for method in methods:
         print(f"\tmethod {method}: {coll.count_documents({'method': method})}")
-    print(f"{coll.count_documents({'method': 'GET',
-                                'path': '/status'})} status check")
+    print(f"{coll.count_documents(
+        {'method': 'GET',
+        'path': '/status'})} status check")
