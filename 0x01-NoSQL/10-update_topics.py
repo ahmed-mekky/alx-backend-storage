@@ -2,8 +2,8 @@
 """python script for mongodb"""
 
 
-def insert_school(mongo_collection, **kwargs):
+def update_topics(mongo_collection, name, topics):
     """python function for mongodb"""
     if not mongo_collection:
         return []
-    return mongo_collection.insert_one(kwargs).inserted_id
+    mongo_collection.update_many({"name": name}, {"$set": {"topics": topics}})
