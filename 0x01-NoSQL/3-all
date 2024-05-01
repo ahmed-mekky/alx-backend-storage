@@ -1,0 +1,2 @@
+// mongodb script 
+db.school.find()
