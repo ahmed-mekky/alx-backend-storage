@@ -8,8 +8,7 @@ class Cache:
     """Cache class"""
     def __init__(self):
         """Constructor"""
-        self ._redis = redis.Redis()
-        self._redis.flushdb()
+        self._redis = redis.Redis().flushdb()
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
