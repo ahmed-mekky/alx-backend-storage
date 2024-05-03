@@ -1,18 +1,13 @@
 #!/usr/bin/env python3
-"""
-Cache module
-"""
+"""Cache module"""
 import redis
 from uuid import uuid4
 from typing import Union
 
 class Cache:
-    """
-    Cache class
-    """
+    """Cache class"""
     def __init__(self):
-        """
-        Constructor"""
+        """Constructor"""
         self ._redis = redis.Redis()
         self._redis.flushdb()
 
